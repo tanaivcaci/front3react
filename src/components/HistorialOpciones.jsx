@@ -29,7 +29,6 @@ export default class HistorialOpciones extends Component {
 
 //MÉTODOS DEL CICLO DE VIDA - DESMONTAJE
   /*
-
     Son ejecutados cuando el componente ha sido eliminado del DOM. 
     Es importante que el componente padre indique cuando debe desmontarse el componente hijo. 
     En el componente hijo declaramos el método componentWillUnmount para que realice tareas 

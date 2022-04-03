@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import BotonOpcion from './BotonOpcion';
 import HistorialOpciones from "./HistorialOpciones";
-import data from './data.json';
+import info from './data.json';
 import '../index.css';
 
 
@@ -15,7 +15,8 @@ class Historia extends Component {
       //indice representa el índice de mi data.json ->  0 es equivalente a la historia con id = "1"
       indice: 0,
       seleccionAnterior: '',
-      historial: []
+      historial: [],
+      data: info
     };
 
     // this.handleClick = this.handleClick.bind(this);
@@ -81,9 +82,9 @@ class Historia extends Component {
     const seleccion = e.target.id;
     // console.log(e.target.id);
 
-    console.log(this.state.indice);
+    // console.log(this.state.indice);
 
-    if (this.state.indice >= (data.length - 2)) {
+    if (this.state.indice >= (this.state.data.length - 2)) {
 
       // alert('FIN DE LA HISTORIA ')
       this.setState({
@@ -163,6 +164,7 @@ class Historia extends Component {
     const indice = this.state.indice;
     const historial = this.state.historial;
     const anterior = this.state.seleccionAnterior;
+    const data = this.state.data;
 
     return (
       <div className="layout">
